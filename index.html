@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wedding Invitation</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- Google Fonts: soft + playful -->
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Quicksand:wght@400;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ===== MUSIC TOGGLE (floating) ===== -->
+  <button id="musicBtn" class="music-btn" aria-label="Play music">🎵</button>
+  <audio id="bgMusic" loop>
+    <source src="" type="audio/mpeg" />
+  </audio>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero">
+    <div class="hero-content">
+      <p class="small">The Wedding Of</p>
+      <h1 class="couple-names"><span id="groomName"></span><br/><span class="amp">&</span><br/><span id="brideName"></span></h1>
+      <p class="hashtag" id="hashtag"></p>
+      <p class="date-display" id="dateDisplay"></p>
+      <button class="btn" id="musicPrompt">Tekan untuk mainkan lagu</button>
+    </div>
+  </section>
+
+  <!-- ===== INVITATION TEXT ===== -->
+  <section class="section invitation">
+    <p class="assalam">Assalamualaikum & Salam Sejahtera</p>
+    <p id="invitationText"></p>
+    <p class="poem" id="poem"></p>
+  </section>
+
+  <!-- ===== COUNTDOWN ===== -->
+  <section class="section countdown-section">
+    <h2>Menghitung Hari</h2>
+    <div class="countdown" id="countdown">
+      <div><span id="days">0</span><small>hari</small></div>
+      <div><span id="hours">0</span><small>jam</small></div>
+      <div><span id="minutes">0</span><small>minit</small></div>
+      <div><span id="seconds">0</span><small>saat</small></div>
+    </div>
+    <button class="btn" id="addToCalendar">📅 Add to Calendar</button>
+  </section>
+
+  <!-- ===== VENUE ===== -->
+  <section class="section venue-section">
+    <h2>Lokasi</h2>
+    <p class="venue-name" id="venueName"></p>
+    <p class="venue-address" id="venueAddress"></p>
+    <div class="map-wrapper">
+      <iframe id="mapEmbed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+    <div class="btn-row">
+      <a class="btn" id="gmapsBtn" target="_blank">Google Maps</a>
+      <a class="btn" id="wazeBtn" target="_blank">Waze</a>
+    </div>
+  </section>
+
+  <!-- ===== SCHEDULE ===== -->
+  <section class="section schedule-section">
+    <h2>Atur Cara Majlis</h2>
+    <ul class="schedule" id="scheduleList"></ul>
+  </section>
+
+  <!-- ===== CONTACTS ===== -->
+  <section class="section contacts-section">
+    <h2>Hubungi</h2>
+    <div id="contactsList" class="contacts"></div>
+  </section>
+
+  <!-- ===== RSVP ===== -->
+  <section class="section rsvp-section">
+    <h2>RSVP</h2>
+    <p>Sila sahkan kehadiran anda agar majlis dapat kami sempurnakan sebaiknya.</p>
+    <iframe id="rsvpForm" loading="lazy"></iframe>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <p id="footerHashtag"></p>
+    <p class="small">Made with love 💐</p>
+  </footer>
+
+  <script src="config.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
